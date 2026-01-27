@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Review Medicines</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+  <h2>Your Medicine History</h2>
+
+  {% for h in history %}
+  <div class="card">
+    {% if h.type == "BOOKING" %}
+      <h3>Medicine Booking</h3>
+      <p><b>Medicine:</b> {{ h.medicine }}</p>
+      <p><b>Quantity:</b> {{ h.quantity }}</p>
+      <p><b>Status:</b> {{ h.status }}</p>
+      <p><b>Total Price:</b> {{ h.total_price or "Pending" }}
+    {% else %}
+      <h3>Price Enquiry</h3>
+      <p><b>Medicine:</b> {{ h.medicine }}</p>
+      <p><b>Quantity:</b> {{ h.quantity }}</p>
+      <p>Status: Price Requested</p>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6f8;
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  animation: slideIn 0.4s ease;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+button {
+  margin-top: 8px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+button:first-of-type {
+  background: #2e7d32;
+  color: white;
+}
+
+.delete-btn {
+  background: #d32f2f;
+  color: white;
+  margin-left: 10px;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.close-btn {
+  background: #757575;
+  color: white;
+  margin-left: 8px;
+}
+.close-btn:hover {
+  background: #424242;
+}
+.chat-row {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.chat-row.left {
+  justify-content: flex-start;
+}
+
+.chat-row.right {
+  justify-content: flex-end;
+}
+
+.chat-bubble {
+  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* USER */
+.user-bubble {
+  background: #e3f2fd;
+  border-top-left-radius: 4px;
+}
+
+/* ADMIN */
+.admin-bubble {
+  background: #c8e6c9;
+  border-top-right-radius: 4px;
+}
+.chat-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}

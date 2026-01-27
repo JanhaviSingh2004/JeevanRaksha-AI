@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard | Jeevan Raksha</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.65)),
+    url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.dashboard{
+    width:100%;
+    max-width:800px;
+    background:#ffffff;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.25);
+}
+
+/* HEADER */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.header h2{
+    color:#2E7D32;
+}
+
+.role{
+    background:#e8f5e9;
+    color:#2E7D32;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+}
+
+/* CARD */
+.card{
+    background:#f9f9f9;
+    border-radius:16px;
+    padding:25px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.08);
+    transition:transform .2s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:#1b5e20;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:14px;
+    color:#555;
+    margin-bottom:15px;
+}
+
+/* BUTTONS */
+.card button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#2E7D32;
+    color:#fff;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.card button:hover{
+    background:#1b5e20;
+}
+
+/* FOOTER */
+.footer{
+    margin-top:30px;
+    text-align:center;
+}
+
+.logout{
+    display:inline-block;
+    padding:10px 25px;
+    border-radius:25px;
+    background:#c62828;
+    color:#fff;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.logout:hover{
+    background:#b71c1c;
+}
+</style>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h2>🛡 Admin Dashboard</h2>
+        <div class="role">Administrator</div>
+    </div>
+
+    <!-- ACTION CARDS -->
+    <div class="grid">
+
+        <!-- ✅ APPOINTMENT REQUESTS -->
+        <div class="card">
+            <h3>📋 Appointment Requests</h3>
+            <p>View, approve or reject patient appointment requests.</p>
+            <button onclick="location.href='/admin_appointments'">
+                Manage Appointments
+            </button>
+        </div>
+        <!-- 💬 QUERY RESPONSES -->
+    <div class="card">
+    <h3>💬 User Queries</h3>
+    <p>View and reply to user queries</p>
+    <button onclick="openAdminQuery()">Open Queries</button>
+</div>
+
+<script>
+function openAdminQuery(){
+    window.location.href = "http://localhost:3001/admin/admin.html";
+}
+</script>
+        <!-- 📊 SYSTEM STATISTICS -->
+        <div class="card">
+            <h3>📊 System Statistics</h3>
+            <p>View system usage statistics and reports.</p>
+            <button onclick="location.href='/admin_stats'">
+                View Statistics
+            </button>
+        </div>
+        <!-- ⚙️ MANAGE USERS -->
+        <div class="card">
+            <h3>⚙️ Manage Users</h3>
+            <p>Add, remove or update user roles and permissions.</p>
+            <button onclick="location.href='/manage_users'">
+                Manage Users
+            </button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <a href="/logout" class="logout">Logout</a>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MediLingo | Summary</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<section class="medilingo-hero">
+
+    <div class="result-card">
+
+        <h1 class="result-title">Medical Report Summary</h1>
+
+        <div class="summary-block">
+            <h2>English</h2>
+            <p>{{ summary_en }}</p>
+        </div>
+
+        <div class="summary-block">
+            <h2>Hindi</h2>
+            <p>{{ summary_hi }}</p>
+        </div>
+
+        <div class="summary-block">
+            <h2>Punjabi</h2>
+            <p>{{ summary_pa }}</p>
+        </div>
+
+        <a href="/" class="back-btn">← Upload Another Report</a>
+
+    </div>
+
+</section>
+
+</body>
+</html>

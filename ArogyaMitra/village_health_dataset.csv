@@ -1,0 +1,111 @@
+disease,symptoms,medicine,care,warning
+Common Cold,cold cough sneezing,Paracetamol|Cough syrup,Warm water|Steam inhalation|Rest,false
+Viral Fever,fever body pain weakness,Paracetamol,Drink fluids|Rest,false
+Flu,fever cold cough,Paracetamol|Cough syrup,Warm fluids|Rest,false
+Fever,fever high temperature,Paracetamol,Rest|Drink water,false
+Headache,head pain heaviness,Paracetamol,Rest|Avoid mobile,false
+Body Pain,body ache pain,Paracetamol,Warm compress|Rest,false
+Cough,dry cough wet cough,Cough syrup,Warm water|Avoid dust,false
+Sore Throat,throat pain difficulty swallowing,Lozenges|Paracetamol,Warm salt water,false
+Loose Motion,diarrhea loose motion,ORS,Drink water|Light food,false
+Food Poisoning,vomiting diarrhea nausea,ORS,Rest|Avoid outside food,false
+Vomiting,vomiting nausea,ORS,Small sips water,false
+Stomach Pain,stomach pain cramps,Antacid,Warm water|Light food,false
+Gas Problem,gas bloating,Antacid,Avoid spicy food,false
+Acidity,heartburn acidity,Antacid,Small meals,false
+Constipation,hard stool difficulty passing,None,Fruits|Water|Walking,false
+Indigestion,heavy stomach discomfort,Antacid,Light food,false
+Chest Pain,chest pain breathing,None,Go to hospital immediately,true
+Breathing Problem,shortness of breath,None,Hospital visit,true
+Asthma,breathing wheeze,Inhaler,Use inhaler|Avoid dust,true
+Pneumonia,fever cough breathlessness,None,Hospital treatment,true
+Malaria,fever chills sweating,None,Blood test|Hospital,true
+Dengue,high fever body pain,None,Hospital immediately,true
+Typhoid,fever weakness stomach pain,None,Doctor visit,true
+Tuberculosis,long cough weight loss,None,Government hospital,true
+COVID-19,fever cough breathlessness,None,Isolation|Testing,true
+Skin Allergy,itching rash,Antihistamine,Keep skin clean,false
+Rashes,red itchy skin,Antihistamine,Cold compress,false
+Fungal Infection,itching white patches,Antifungal cream,Keep area dry,false
+Scabies,night itching rash,Antiscabies lotion,Wash clothes,false
+Eczema,dry itchy skin,Moisturizer,Avoid scratching,false
+Burns,burn pain blisters,Burn ointment,Cool water,false
+Cuts and Wounds,bleeding cut,Antiseptic cream,Clean wound,false
+Eye Irritation,red eyes itching,Eye drops,Avoid rubbing,false
+Conjunctivitis,red sticky eyes,Eye drops,Wash hands,false
+Ear Pain,ear ache pain,Ear drops,Keep ear dry,false
+Toothache,tooth pain swelling,Pain reliever,Visit dentist,false
+Gum Infection,swollen gums,Pain reliever,Oral hygiene,false
+UTI,burning urination pain,None,Drink water|Doctor,true
+Kidney Stone,back pain urine pain,None,Doctor visit,true
+Diabetes,high sugar thirst,None,Doctor monitoring,true
+Low Blood Sugar,dizziness sweating,Sugar water,Rest,false
+High Blood Pressure,headache dizziness,None,Reduce salt,true
+Low Blood Pressure,weakness fainting,Salt water,Lie down,false
+Anemia,weakness pale skin,Iron tablets,Green vegetables,false
+Jaundice,yellow eyes urine,None,Rest|Doctor,true
+Hepatitis,liver pain jaundice,None,Hospital,true
+Pregnancy Nausea,morning sickness,None,Small meals,false
+Menstrual Pain,lower stomach pain,Pain reliever,Warm compress,false
+Irregular Periods,delayed periods,None,Doctor advice,false
+Back Pain,lower back pain,Pain reliever,Rest,false
+Joint Pain,knee pain stiffness,Pain reliever,Warm compress,false
+Arthritis,joint swelling pain,None,Doctor care,true
+Sprain,twisted joint pain,Pain reliever,Ice|Rest,false
+Heat Stroke,high heat dizziness,None,Hospital immediately,true
+Dehydration,dry mouth weakness,ORS,Drink water,false
+Sunburn,red skin burning,Aloe gel,Avoid sun,false
+Cold Injury,numb skin,None,Warm area,true
+Motion Sickness,nausea travel,None,Rest,false
+Sleep Problem,insomnia,None,Avoid phone,false
+Stress,anxiety tension,None,Relaxation,false
+Depression,sadness low mood,None,Doctor support,true
+Alcohol Intoxication,drunk vomiting,None,Hospital,true
+Poison Ingestion,poison swallowed,None,Emergency hospital,true
+Snake Bite,bite swelling,None,Emergency hospital,true
+Dog Bite,bite bleeding,None,Anti-rabies injection,true
+Cold and Fever,cold fever shivering,Paracetamol,Warm fluids|Rest,false
+Seasonal Allergy,sneezing runny nose,Antihistamine,Avoid dust,false
+Sinus Problem,face pain blocked nose,Paracetamol|Steam inhalation,Steam inhalation,false
+Tonsillitis,throat swelling pain,Paracetamol|Antibiotic,Doctor visit,false
+Neck Pain,neck stiffness pain,Pain reliever,Warm compress,false
+Shoulder Pain,shoulder pain stiffness,Pain reliever,Rest,false
+Leg Pain,leg pain cramps,Pain reliever,Warm compress,false
+Foot Pain,foot pain walking,Pain reliever,Rest,false
+Muscle Cramps,leg cramps pain,ORS|Pain reliever,Stretching,false
+Swelling,body swelling edema,None,Doctor consultation,true
+Water Retention,swelling feet,None,Reduce salt|Doctor,true
+Urine Infection,frequent urination pain,None,Drink water|Doctor,true
+Frequent Urination,urine often,None,Doctor check,true
+Burning Sensation,body burning feeling,None,Drink water,false
+Mouth Ulcer,mouth sore pain,Gel ointment,Avoid spicy food,false
+Lip Swelling,lip swelling allergy,Antihistamine,Cold compress,false
+Nose Bleeding,nose bleeding blood,None,Sit upright|Cold compress,false
+Dizziness,head spinning giddiness,None,Sit down|Rest,false
+Fainting,loss of consciousness,None,Hospital visit,true
+Weak Immunity,falling sick often,None,Nutritious food,false
+Loss of Appetite,no hunger eating problem,None,Small meals,false
+Weight Loss,unplanned weight loss,None,Doctor check,true
+Weight Gain,weight increase,None,Exercise,false
+Obesity,overweight fat,None,Diet control,false
+Hair Fall,hair loss thinning,None,Protein diet,false
+Dandruff,flaky scalp itching,Anti-dandruff shampoo,Keep scalp clean,false
+Itching All Over,body itching,None,Antihistamine,false
+Bed Sores,skin wound bed,None,Hospital care,true
+Boils,skin boil pus,Antibiotic cream,Keep area clean,false
+Piles,anal pain bleeding,None,Fiber diet|Doctor,true
+Anal Fissure,anal pain tear,None,Warm sitz bath,true
+Hernia,abdominal bulge pain,None,Doctor advice,true
+Appendicitis,right stomach pain,None,Emergency hospital,true
+Gall Stones,upper stomach pain,None,Doctor consultation,true
+Liver Problem,liver pain swelling,None,Doctor care,true
+Thyroid Problem,neck swelling fatigue,None,Doctor monitoring,true
+Breast Pain,breast pain tenderness,None,Doctor check,false
+Testicular Pain,testicle pain swelling,None,Emergency hospital,true
+Sexual Weakness,low stamina,None,Doctor consultation,false
+Infertility,no pregnancy,None,Doctor advice,true
+Urinary Retention,cannot pass urine,None,Emergency hospital,true
+Night Sweats,sweating at night,None,Doctor check,true
+Excessive Sweating,too much sweat,None,Hydration,false
+Cold Hands Feet,cold hands feet,None,Warm clothing,false
+

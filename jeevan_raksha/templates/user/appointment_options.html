@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Appointments | Jeevan Raksha</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Segoe UI,sans-serif;
+    background: url("{{ url_for('static', filename='images/bg.jpeg') }}") ;
+}
+
+.card{
+    background:#fff;
+    padding:40px;
+    border-radius:16px;
+    width:420px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+h2{
+    margin-bottom:30px;
+}
+
+.btn{
+    display:block;
+    padding:14px;
+    margin:15px 0;
+    border-radius:30px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:600;
+    background:#2f80ed;
+}
+
+.btn.secondary{
+    background:#27ae60;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>📅 Appointment Services</h2>
+
+    <a href="/appointment" class="btn">Book Appointment</a>
+    <a href="/review_appointments" class="btn secondary">Review Appointments</a>
+</div>
+
+</body>
+</html>

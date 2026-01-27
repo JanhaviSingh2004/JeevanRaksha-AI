@@ -1,0 +1,37 @@
+disease,keywords,medicines,care,warning
+Common Cold,cold cough sneezing,Paracetamol|Cough syrup,Warm fluids|Steam inhalation|Rest,false
+Viral Fever,fever body pain weakness,Paracetamol,Plenty of fluids|Rest,false
+Flu,fever cold cough body pain,Paracetamol|Cough syrup,Warm fluids|Rest,false
+Malaria,fever chills sweating,None,Blood test required|Hospital visit,true
+Dengue,high fever body pain platelet,None,Hospital visit immediately,true
+Typhoid,fever stomach pain weakness,None,Doctor consultation,true
+Loose Motion,diarrhea loose motion,ORS,Drink water|Light food,false
+Food Poisoning,vomiting diarrhea nausea,ORS,Rest|Avoid outside food,false
+Stomach Pain,stomach pain gas,Antacid,Warm water|Light food,false
+Headache,headache migraine,Paracetamol,Rest|Avoid mobile,false
+Chest Pain,chest pain breathing,None,Emergency hospital visit,true
+Breathing Problem,shortness breath,None,Go to hospital,true
+UTI,burning urination pain,None,Drink water|Doctor visit,true
+Skin Allergy,itching rash,Antihistamine,Keep area clean,false
+Diabetes,high sugar diabetes,None,Doctor monitoring,true
+High Blood Pressure,high bp hypertension,None,Reduce salt|Doctor care,true
+Body Pain,body pain ache,Paracetamol,Rest|Warm compress,false
+Back Pain,back pain lower back,Paracetamol,Rest|Warm compress,false
+Joint Pain,joint pain knee pain,Paracetamol,Rest|Warm compress,false
+Gas Problem,gas bloating acidity,Antacid,Avoid spicy food|Warm water,false
+Acidity,acidity heartburn,Antacid,Small meals|Avoid oily food,false
+Indigestion,indigestion heavy stomach,Antacid,Light food|Rest,false
+Vomiting,vomiting nausea,ORS,Small sips of water|Rest,false
+Dehydration,dehydration dry mouth,ORS,Drink water|Rest,false
+Heat Stroke,heat dizziness fainting,None,Go to hospital immediately,true
+Cold and Cough,cold cough throat pain,Paracetamol|Cough syrup,Warm fluids|Steam inhalation,false
+Sore Throat,sore throat pain swallowing,Paracetamol|Lozenges,Warm salt water,false
+Toothache,tooth pain swelling,Paracetamol,Visit dentist,false
+Ear Pain,ear pain ache,Paracetamol,Keep ear dry,false
+Eye Irritation,eye itching redness,Eye drops,Avoid rubbing,false
+Burns,burn blister pain,Burn ointment,Cool water|Cover burn,false
+Cuts and Wounds,cut bleeding injury,Antiseptic cream,Clean wound|Bandage,false
+Anemia,weakness pale dizziness,Iron tablets,Green vegetables,false
+Low Blood Sugar,low sugar sweating dizziness,Sugar water,Rest,false
+Low Blood Pressure,low bp weakness,Salt water,Lie down,false
+

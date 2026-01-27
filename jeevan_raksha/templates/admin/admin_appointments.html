@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin | Appointment Requests</title>
+
+<style>
+:root{
+  --primary:#1a73e8;
+  --success:#2e7d32;
+  --danger:#c62828;
+  --warning:#f9a825;
+  --bg:#eef3fb;
+  --border:#dbe3f1;
+  --text:#0b2545;
+}
+
+body{
+  margin:0;
+  padding:40px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url("{{ url_for('static', filename='images/bg.jpeg') }}") no-repeat center center;
+}
+
+/* PAGE CARD */
+.container{
+  max-width:1400px;
+  margin:auto;
+  background:#ffffff;
+  border-radius:14px;
+  box-shadow:0 12px 32px rgba(0,0,0,0.10);
+  padding:35px 45px 40px;
+}
+
+/* HEADER */
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:25px;
+}
+
+.header h2{
+  margin:0;
+  font-size:24px;
+  color:var(--text);
+}
+
+.header a{
+  text-decoration:none;
+  color:var(--primary);
+  font-weight:bold;
+  font-size:14px;
+}
+
+/* TABLE */
+table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0 10px;
+  font-size:14px;
+}
+
+thead tr{
+  background:#f5f9ff;
+}
+
+th{
+  padding:14px 14px;
+  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:.5px;
+  color:#444;
+  border-bottom:2px solid var(--border);
+}
+
+td{
+  padding:16px 14px;
+  text-align:center;
+  background:#ffffff;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+
+tr td:first-child{
+  border-left:1px solid var(--border);
+  border-radius:10px 0 0 10px;
+}
+
+tr td:last-child{
+  border-right:1px solid var(--border);
+  border-radius:0 10px 10px 0;
+}
+
+/* STATUS */
+.status{
+  font-weight:bold;
+  font-size:13px;
+}
+
+.status.Pending{ color:var(--warning); }
+.status.Approved{ color:var(--success); }
+.status.Rejected{ color:var(--danger); }
+
+/* ACTION BUTTONS */
+.actions{
+  display:flex;
+  gap:8px;
+  justify-content:center;
+}
+
+.approve,
+.reject{
+  padding:8px 14px;
+  border-radius:20px;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:bold;
+}
+
+.approve{
+  background:#e8f5e9;
+  color:var(--success);
+}
+
+.reject{
+  background:#fdecea;
+  color:var(--danger);
+}
+
+.approve:hover{
+  background:var(--success);
+  color:#fff;
+}
+
+.reject:hover{
+  background:var(--danger);
+  color:#fff;
+}
+
+/* FOOTER */
+.footer{
+  margin-top:30px;
+  text-align:right;
+}
+
+.back{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:12px 20px;
+  background:var(--primary);
+  color:#fff;
+  text-decoration:none;
+  border-radius:8px;
+  font-size:14px;
+  font-weight:bold;
+}
+
+.back:hover{
+  background:#1558b0;
+}
+
+/* MOBILE */
+@media(max-width:1000px){
+  body{
+    padding:20px;
+  }
+
+  .container{
+    padding:25px;
+  }
+
+  table{
+    font-size:13px;
+  }
+
+  th, td{
+    padding:12px 10px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <h2>📋 Appointment Requests</h2>
+    <a href="/admin_dashboard">⬅ Back to Dashboard</a>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Patient</th>
+        <th>Phone</th>
+        <th>Department</th>
+        <th>Doctor</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+    {% for a in appointments %}
+      <tr>
+        <td>{{ a.user_name }}</td>
+        <td>{{ a.patient_name }}</td>
+        <td>{{ a.phone }}</td>
+        <td>{{ a.department }}</td>
+        <td>{{ a.doctor }}</td>
+        <td>{{ a.date }}</td>
+        <td>{{ a.time_slot }}</td>
+        <td>
+          <span class="status {{ a.status }}">{{ a.status }}</span>
+        </td>
+        <td>
+          {% if a.status == "Pending" %}
+          <div class="actions">
+            <a class="approve" href="/update_appointment/{{ a.id }}/Approved">Approve</a>
+            <a class="reject" href="/update_appointment/{{ a.id }}/Rejected">Reject</a>
+          </div>
+          {% else %}
+            —
+          {% endif %}
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+  <div class="footer">
+    <a href="/home" class="back">← Back</a>
+  </div>
+
+</div>
+
+</body>
+</html>

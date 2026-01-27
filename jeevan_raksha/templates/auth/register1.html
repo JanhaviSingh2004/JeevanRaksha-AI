@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: url("bg.png") no-repeat center bottom;
+    background-size: cover;
+    background-color: #eef4ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 420px;
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.role-switch {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.role-switch button {
+    padding: 6px 22px;
+    border: none;
+    border-radius: 6px;
+    background: #9bb6df;
+    color: white;
+    cursor: pointer;
+}
+
+.role-switch button.active {
+    background: #5c86c7;
+}
+
+h1 {
+    color: #254f91;
+    margin-bottom: 25px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    background: #d5dde9;
+}
+
+input::placeholder {
+    color: #ffffff;
+}
+
+.action-btn {
+    width: 100%;
+    padding: 12px;
+    background: #7fa6db;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+
+.links {
+    margin-top: 15px;
+}
+
+.links a {
+    margin: 0 18px;
+    text-decoration: none;
+    color: #2a56a3;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <div class="role-switch">
+        <button id="userBtn" class="active" onclick="setRole('User')">User</button>
+        <button id="adminBtn" onclick="setRole('Admin')">Admin</button>
+    </div>
+
+    <h1 id="title">Welcome</h1>
+
+    <input type="text" id="name" placeholder="Name">
+    <input type="text" id="phone" placeholder="Phone Number">
+    <input type="password" id="password" placeholder="Password">
+
+    <button class="action-btn" id="registerBtn" onclick="register()">Register</button>
+
+    <div class="links">
+        <a id="langBtn" onclick="toggleLang()">Hindi</a>
+        <a id="loginLink" href="../login/index.html">Login</a>
+    </div>
+
+    <div class="error" id="error"></div>
+</div>
+
+<script>
+let role = "User";
+let isHindi = false;
+
+function setRole(selectedRole) {
+    role = selectedRole;
+    userBtn.classList.remove("active");
+    adminBtn.classList.remove("active");
+    role === "User" ? userBtn.classList.add("active") : adminBtn.classList.add("active");
+}
+
+function toggleLang() {
+    isHindi = !isHindi;
+
+    if (isHindi) {
+        title.innerText = "स्वागत है";
+        name.placeholder = "नाम";
+        phone.placeholder = "फ़ोन नंबर";
+        password.placeholder = "पासवर्ड";
+        registerBtn.innerText = "रजिस्टर";
+        loginLink.innerText = "लॉगिन";
+        langBtn.innerText = "English";
+    } else {
+        title.innerText = "Welcome";
+        name.placeholder = "Name";
+        phone.placeholder = "Phone Number";
+        password.placeholder = "Password";
+        registerBtn.innerText = "Register";
+        loginLink.innerText = "Login";
+        langBtn.innerText = "Hindi";
+    }
+}
+
+function register() {
+    if (name.value === "" || phone.value === "" || password.value === "") {
+        error.innerText = "Please fill all fields";
+        return;
+    }
+    alert(role + " Registered Successfully");
+}
+</script>
+
+</body>
+</html>

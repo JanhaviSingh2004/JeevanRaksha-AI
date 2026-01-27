@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bookings</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+  <h2>Medicine Bookings</h2>
+
+  {% for b in bookings %}
+  <div class="card">
+    <p>{{ b.medicine }} ({{ b.quantity }})</p>
+    <p>Status: {{ b.status }}</p>
+
+    <form method="POST" action="/admin/update_booking">
+      <input type="hidden" name="id" value="{{ b.id }}">
+      <input type="date" name="delivery_date" required>
+      <button name="status" value="Accepted">Accept</button>
+      <button name="status" value="Rejected" class="reject">Reject</button>
+    </form>
+  </div>
+  {% endfor %}
+</div>
+
+</body>
+</html>

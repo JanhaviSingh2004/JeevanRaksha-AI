@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MediLingo | JeevanRaksha</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<section class="medilingo-hero">
+
+    <!-- WHITE BOX WRAPPER -->
+    <div class="white-box">
+
+        <!-- FORM START -->
+        <form class="upload-controls" method="POST" enctype="multipart/form-data">
+
+            <input type="file" id="fileInput" name="file" hidden
+                   accept=".txt,.pdf,.docx"
+                   onchange="showFileName(this)">
+
+            <label for="fileInput" class="choose-btn">
+                Choose File
+                <span class="file-status" id="fileStatus">No file chosen</span>
+            </label>
+
+            <button type="submit" class="upload-btn">
+                Upload & Summarize
+            </button>
+
+        </form>
+        <!-- FORM END -->
+
+    </div>
+
+</section>
+
+<!-- ERROR -->
+{% if error %}
+<div class="error-box">{{ error }}</div>
+{% endif %}
+
+<script>
+function showFileName(input) {
+    const status = document.getElementById("fileStatus");
+    status.textContent = input.files.length
+        ? input.files[0].name
+        : "No file chosen";
+}
+</script>
+
+</body>
+</html>

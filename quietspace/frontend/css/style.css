@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-image: url("../assets/bg1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 80px;
+}
+
+/* BUTTON CONTAINER */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* PILL BUTTON (ANCHOR STYLED AS BUTTON) */
+.pill-btn {
+  width: 420px;
+  padding: 26px 32px;
+
+  border-radius: 60px;
+  background: white;
+
+  text-decoration: none;     /* IMPORTANT */
+  color: inherit;            /* IMPORTANT */
+
+  cursor: pointer;
+  text-align: left;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pill-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(30, 58, 95, 0.25);
+}
+
+/* BUTTON TEXT */
+.title {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1e3a5f;
+}
+
+.subtitle {
+  display: block;
+  font-size: 18px;
+  color: #555;
+  margin-top: 6px;
+}
+
+/* ===================== */
+/* CHAT PAGE STYLES */
+/* ===================== */
+
+.chat-page {
+  background: #eef6fb;
+  height: 100vh;
+}
+
+.chat-container {
+  max-width: 700px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-top {
+  text-align: center;
+  padding: 15px;
+  color: #6b7c93;
+  font-size: 14px;
+}
+
+.chat-box {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.msg {
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.msg.ai {
+  background: #f2f7fb;
+  color: #2c3e50;
+}
+
+.msg.user {
+  background: #d9ecf7;
+  margin-left: auto;
+}
+
+.chat-input {
+  display: flex;
+  padding: 15px;
+  border-top: 1px solid #dbe9f3;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid #cfdfea;
+  outline: none;
+}
+
+.chat-input button {
+  margin-left: 10px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #5dade2;
+  color: white;
+}
+
+/* ===================== */
+/* TALK PAGE STYLES */
+/* ===================== */
+
+.talk-page {
+  background: linear-gradient(to bottom, #eef6fb, #ffffff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.talk-container {
+  text-align: center;
+}
+
+.talk-sub {
+  color: #6b7c93;
+  margin: 10px 0 30px;
+}
+
+.mic-btn {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: none;
+  font-size: 32px;
+  background: #5dade2;
+  color: white;
+  cursor: pointer;
+}
+
+.spoken-text {
+  margin-top: 20px;
+  color: #555;
+}

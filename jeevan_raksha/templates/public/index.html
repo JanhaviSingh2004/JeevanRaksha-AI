@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JeevanRaksha</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<!-- ================= PAGE 1 ================= -->
+
+<nav class="navbar">
+    <div class="logo">JeevanRaksha</div>
+    <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('home') }}#about">About</a></li>
+        <li><a href="{{ url_for('home') }}#services">Services</a></li>
+        <li><a href="{{ url_for('home') }}#telemanas">Telemanas</a></li>
+        {% if 'role' in session %}
+            <li><a href="{{ url_for('logout') }}" class="login">Logout</a></li>
+        {% else %}
+            <li><a href="{{ url_for('login_page') }}" class="login">Login</a></li>
+        {% endif %}
+    </ul>
+</nav>
+
+<section class="hero">
+    <!-- EXISTING BUTTON -->
+    <button class="cta-btn">Book a Call</button>
+
+    <!-- 🔽 ADDED BUTTON (SAME STYLE, ROLE BASED) -->
+    {% if session.get("role") == "user" %}
+        <a href="{{ url_for('medicine_redirect') }}" class="cta-btn secondary">
+            Book Medicines
+        </a>
+    {% elif session.get("role") == "admin" %}
+        <a href="{{ url_for('medicine_redirect') }}" class="cta-btn secondary">
+            Review Medicines
+        </a>
+    {% endif %}
+</section>
+
+<!-- ================= PAGE 2 ================= -->
+
+<section class="hero" id="home">
+<section class="about-hero" id="about">
+    <div class="about-content">
+        <!-- WHO WE ARE + About JeevanRaksha text -->
+    </div>
+</section>
+
+<section class="pillars-section">
+    <div class="pillars-container">
+        <!-- cards -->
+    </div>
+</section>
+
+<section class="services-hero" id="services"></section>
+
+<div class="services-container"></div>
+</section>
+
+<section class="telemanas-hero" id="telemanas">
+
+<section class="pillars-section">
+    <div class="pillars-container">
+
+        <div class="pillar-card">
+            <img src="{{ url_for('static', filename='images/icon1.png') }}">
+            <p class="pillar-text">
+                Building trust and healing through strong,
+                supportive community connections.
+            </p>
+        </div>
+
+        <div class="pillar-card">
+            <img src="{{ url_for('static', filename='images/icon2.png') }}">
+            <p class="pillar-text">
+                Nurturing physical, mental, and emotional
+                well-being together.
+            </p>
+        </div>
+
+        <div class="pillar-card">
+            <img src="{{ url_for('static', filename='images/icon3.png') }}">
+            <p class="pillar-text">
+                Delivering essential healthcare to those
+                who need it most, wherever they are.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= PAGE 3 ================= -->
+
+<section class="services-hero">
+    <div class="services-container">
+
+        <a href="/service/arogya-mitra" class="service-card">
+            <img src="{{ url_for('static', filename='images/service2.png') }}">
+        </a>
+
+        <a href="/service/medilingo" class="service-card">
+            <img src="{{ url_for('static', filename='images/service1.png') }}">
+        </a>
+
+        <a href="/service/appointment" class="service-card">
+            <img src="{{ url_for('static', filename='images/service3.png') }}">
+        </a>
+
+    </div>
+</section>
+
+<!-- ================= PAGE 4 : TELE MANAS ================= -->
+
+<section class="telemanas-hero">
+
+    <!-- CLICKABLE AREAS -->
+    <a href="tel:14416" class="btn tollfree" aria-label="Call 14416"></a>
+    <a href="tel:14416" class="btn support" aria-label="24x7 Support"></a>
+    <a href="https://telemanas.mohfw.gov.in/"
+       target="_blank"
+       class="btn visit"
+       aria-label="Visit Official Website">
+    </a>
+
+</section>
+
+<!-- FLOATING QUERY BUTTON -->
+<a href="/service/query" class="query-float">💬</a>
+<a href="http://127.0.0.1:5004"
+   target="_blank"
+   class="quietplace-float"
+   aria-label="Open QuietPlace">
+   🌿
+</a>
+
+<script>
+document.body.style.zoom = "100%";
+</script>
+
+</body>
+</html>

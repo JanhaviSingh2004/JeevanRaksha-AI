@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: url("/static/images/bg1.png") no-repeat center bottom;
+    background-size: cover;
+    background-color: #eef4ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 420px;
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.role-switch {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.role-switch button {
+    padding: 6px 22px;
+    border: none;
+    border-radius: 6px;
+    background: #9bb6df;
+    color: white;
+    cursor: pointer;
+}
+
+.role-switch button.active {
+    background: #5c86c7;
+}
+
+h1 {
+    color: #254f91;
+    margin-bottom: 25px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    background: #d5dde9;
+}
+
+input::placeholder {
+    color: #ffffff;
+}
+
+.action-btn {
+    width: 100%;
+    padding: 12px;
+    background: #7fa6db;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.links {
+    margin-top: 15px;
+}
+
+.links a {
+    margin: 0 18px;
+    text-decoration: none;
+    color: #2a56a3;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.flash {
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+.flash.error { color: red; }
+.flash.success { color: green; }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="role-switch">
+        <button type="button" id="userBtn" class="active" onclick="setUser()">User</button>
+        <button type="button" id="adminBtn" onclick="setAdmin()">Admin</button>
+    </div>
+
+    <h1 id="title">Welcome</h1>
+
+    <!-- ✅ FLASK FORM -->
+    <form method="POST" id="registerForm" action="/register_user">
+        <input type="text" name="name" id="name" placeholder="Name">
+        <input type="text" name="mobile" id="phone" placeholder="Phone Number">
+        <input type="password" name="password" id="password" placeholder="Password">
+
+        <button class="action-btn" id="registerBtn">Register</button>
+    </form>
+
+    <!-- ✅ FLASH MESSAGES -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% for c, m in messages %}
+        <div class="flash {{ c }}">{{ m }}</div>
+    {% endfor %}
+    {% endwith %}
+
+    <div class="links">
+        <a id="langBtn" onclick="toggleLang()">Hindi</a>
+        <a id="loginLink" href="/">Login</a>
+    </div>
+</div>
+
+<script>
+let isHindi = false;
+
+function toggleLang() {
+    isHindi = !isHindi;
+
+    if (isHindi) {
+        title.innerText = "स्वागत है";
+        name.placeholder = "नाम";
+        phone.placeholder = "फ़ोन नंबर";
+        password.placeholder = "पासवर्ड";
+        registerBtn.innerText = "रजिस्टर";
+        loginLink.innerText = "लॉगिन";
+        langBtn.innerText = "English";
+    } else {
+        title.innerText = "Welcome";
+        name.placeholder = "Name";
+        phone.placeholder = "Phone Number";
+        password.placeholder = "Password";
+        registerBtn.innerText = "Register";
+        loginLink.innerText = "Login";
+        langBtn.innerText = "Hindi";
+    }
+}
+
+function setUser(){
+    userBtn.classList.add("active");
+    adminBtn.classList.remove("active");
+    registerForm.action = "/register_user";
+}
+
+function setAdmin(){
+    adminBtn.classList.add("active");
+    userBtn.classList.remove("active");
+    registerForm.action = "/register_admin"; // optional later
+}
+
+window.onload = setUser;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#008080">
+    <title>ArogyaMitra | AI Diagnosis Result</title>
+    
+    <!-- Tabler Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont/tabler-icons.min.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='result-styles.css') }}">
+</head>
+
+<body>
+    <!-- AI Scanning Loader -->
+    <div class="ai-loader">
+        <div class="scan-animation">
+            <div class="scan-ring"></div>
+            <div class="scan-ring"></div>
+            <div class="scan-ring"></div>
+            <div class="scan-pulse"></div>
+        </div>
+        <div class="scan-text">Initializing AI Engine...</div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="ai-background">
+        <div class="ai-grid"></div>
+        <div class="ai-particles"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="result-container">
+        <!-- Header -->
+        <header class="result-header">
+            <div class="ai-badge">
+                <i class="ti ti-brain"></i>
+                <span>AI-Powered Analysis</span>
+            </div>
+            <h1 class="greeting">
+                {% if lang == 'hi' %}
+                    नमस्ते {{ name }} 👋
+                {% else %}
+                    Hello {{ name }} 👋
+                {% endif %}
+            </h1>
+            <p class="subtitle">
+                {% if lang == 'hi' %}
+                    आपकी स्वास्थ्य रिपोर्ट तैयार है
+                {% else %}
+                    Your health assessment is ready
+                {% endif %}
+            </p>
+        </header>
+
+        <!-- AI Diagnosis Card -->
+        <div class="diagnosis-card">
+            <div class="diagnosis-header">
+                <div class="diagnosis-icon">
+                    <i class="ti ti-stethoscope"></i>
+                </div>
+                <div>
+                    <div class="diagnosis-title">
+                        {% if lang == 'hi' %}
+                            AI निदान परिणाम
+                        {% else %}
+                            AI Diagnosis Result
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="diagnosis-result" id="resultText">
+                {{ result }}
+            </div>
+
+            <!-- AI Confidence Meter -->
+            <div class="confidence-section">
+                <div class="confidence-label">
+                    <span>
+                        {% if lang == 'hi' %}
+                            AI विश्वास स्तर
+                        {% else %}
+                            AI Confidence Level
+                        {% endif %}
+                    </span>
+                    <span class="confidence-value">0%</span>
+                </div>
+                <div class="confidence-bar">
+                    <div class="confidence-fill"></div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn-primary" onclick="speakResult(document.getElementById('voiceText').innerText, '{{ 'hi' if lang == 'hi' else 'en' }}')">
+                    <i class="ti ti-volume"></i>
+                    {% if lang == 'hi' %}
+                        सुनें
+                    {% else %}
+                        Read Aloud
+                    {% endif %}
+                </button>
+                <button class="btn-secondary" id="viewToggle">
+                    <i class="ti ti-eye"></i>
+                    {% if lang == 'hi' %}
+                        सरल दृश्य
+                    {% else %}
+                        Simple View
+                    {% endif %}
+                </button>
+            </div>
+        </div>
+
+        <!-- Hidden text for voice -->
+        <div id="voiceText" style="display:none;">
+            {{ result }}.
+            {% if lang == 'hi' %}
+                सुझाई गई दवाइयाँ:
+            {% else %}
+                Suggested medicines:
+            {% endif %}
+            {% for m in medicines %} {{ m }}, {% endfor %}.
+            {% if lang == 'hi' %}
+                देखभाल सलाह:
+            {% else %}
+                Care advice:
+            {% endif %}
+            {% for c in care %} {{ c }}, {% endfor %}.
+            {% if warning %}
+                {% if lang == 'hi' %}
+                    कृपया तुरंत नज़दीकी अस्पताल जाएँ।
+                {% else %}
+                    Please visit the nearest hospital immediately.
+                {% endif %}
+            {% endif %}
+        </div>
+
+        <!-- Medicine Section -->
+        <section class="medicine-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="ti ti-pill"></i>
+                </div>
+                <h2 class="section-title">
+                    {% if lang == 'hi' %}
+                        💊 सुझाई गई दवाइयाँ
+                    {% else %}
+                        💊 Suggested Medicines
+                    {% endif %}
+                </h2>
+            </div>
+
+            <div class="medicine-grid">
+                {% for m in medicines %}
+                <div class="medicine-card">
+                    <div class="medicine-header">
+                        <div class="medicine-name">{{ m }}</div>
+                        <div class="medicine-icon-small">
+                            <i class="ti ti-capsule"></i>
+                        </div>
+                    </div>
+                    <div class="medicine-details">
+                        <div class="medicine-info">
+                            <p><strong>
+                                {% if lang == 'hi' %}
+                                    उपयोग:
+                                {% else %}
+                                    Usage:
+                                {% endif %}
+                            </strong> 
+                            {% if lang == 'hi' %}
+                                डॉक्टर के निर्देशानुसार लें
+                            {% else %}
+                                Take as prescribed by doctor
+                            {% endif %}
+                            </p>
+                            <p><strong>
+                                {% if lang == 'hi' %}
+                                    सावधानी:
+                                {% else %}
+                                    Precaution:
+                                {% endif %}
+                            </strong> 
+                            {% if lang == 'hi' %}
+                                खाली पेट न लें
+                            {% else %}
+                                Do not take on empty stomach
+                            {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- Care Advice Section -->
+        <section class="care-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="ti ti-heart-rate-monitor"></i>
+                </div>
+                <h2 class="section-title">
+                    {% if lang == 'hi' %}
+                        🧘 देखभाल सलाह
+                    {% else %}
+                        🧘 Care Advice
+                    {% endif %}
+                </h2>
+            </div>
+
+            <div class="care-list">
+                {% for c in care %}
+                <div class="care-item">
+                    <div class="care-icon">
+                        <i class="ti ti-check"></i>
+                    </div>
+                    <div class="care-text">{{ c }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- Warning Alert -->
+        {% if warning %}
+        <div class="warning-alert">
+            <div class="warning-icon">
+                <i class="ti ti-alert-triangle"></i>
+            </div>
+            <div class="warning-content">
+                <div class="warning-title">
+                    {% if lang == 'hi' %}
+                        ⚠️ तत्काल चिकित्सा सहायता आवश्यक
+                    {% else %}
+                        ⚠️ Immediate Medical Attention Required
+                    {% endif %}
+                </div>
+                <div class="warning-text">
+                    {% if lang == 'hi' %}
+                        कृपया तुरंत नज़दीकी अस्पताल या स्वास्थ्य केंद्र जाएँ। यह स्थिति गंभीर हो सकती है।
+                    {% else %}
+                        Please visit the nearest hospital or health center immediately. This condition may be serious.
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+            {% if lang == 'hi' %}
+                ⚠️ यह ऐप केवल सामान्य स्वास्थ्य जानकारी देता है और चिकित्सा निदान का विकल्प नहीं है।<br>
+                लक्षण बढ़ने या बने रहने पर हमेशा योग्य डॉक्टर से परामर्श लें।<br>
+                यह AI-आधारित मार्गदर्शन है, पेशेवर चिकित्सा सलाह नहीं।
+            {% else %}
+                ⚠️ This app provides basic health guidance only and is not a substitute for professional medical diagnosis.<br>
+                Always consult a qualified doctor if symptoms persist or worsen.<br>
+                This is AI-based guidance, not professional medical advice.
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='result-animations.js') }}"></script>
+    <script src="{{ url_for('static', filename='voice.js') }}"></script>
+</body>
+</html>

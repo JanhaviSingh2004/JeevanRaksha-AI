@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Appointments | Jeevan Raksha</title>
+
+<style>
+:root{
+  --primary:#1a73e8;
+  --success:#2e7d32;
+  --warning:#f9a825;
+  --danger:#c62828;
+  --bg:#eef3fb;
+  --border:#dbe3f1;
+  --text:#0b2545;
+}
+
+body{
+  margin:0;
+  padding:40px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url("{{ url_for('static', filename='images/bg.jpeg') }}") no-repeat center center;
+}
+
+/* PAGE CARD */
+.container{
+  max-width:1300px;          /* ⬅ increased width */
+  margin:auto;
+  background:#ffffff;
+  border-radius:14px;
+  box-shadow:0 12px 32px rgba(0,0,0,0.10);
+  padding:35px 45px 40px;
+}
+
+/* HEADING */
+h2{
+  margin:0 0 22px;
+  color:var(--text);
+  font-size:24px;            /* ⬅ slightly bigger */
+  border-bottom:2px solid var(--border);
+  padding-bottom:12px;
+}
+
+/* TABLE */
+table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0 10px;     /* ⬅ space between rows */
+  margin-top:20px;
+  font-size:15px;            /* ⬅ bigger text */
+}
+
+thead tr{
+  background:#f5f9ff;
+}
+
+th{
+  padding:14px 16px;
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  color:#444;
+  border-bottom:2px solid var(--border);
+}
+
+td{
+  padding:16px 16px;         /* ⬅ taller rows */
+  text-align:center;
+  background:#ffffff;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+
+tr td:first-child{
+  border-left:1px solid var(--border);
+  border-radius:10px 0 0 10px;
+}
+
+tr td:last-child{
+  border-right:1px solid var(--border);
+  border-radius:0 10px 10px 0;
+}
+
+/* STATUS BADGES */
+.status-pending,
+.status-approved,
+.status-rejected{
+  display:inline-block;
+  padding:7px 14px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:bold;
+}
+
+.status-pending{
+  background:#fff8e1;
+  color:var(--warning);
+}
+
+.status-approved{
+  background:#e8f5e9;
+  color:var(--success);
+}
+
+.status-rejected{
+  background:#fdecea;
+  color:var(--danger);
+}
+
+/* ACTION BAR */
+.actions{
+  margin-top:30px;
+  text-align:right;
+}
+
+.back{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:12px 20px;
+  background:var(--primary);
+  color:#fff;
+  text-decoration:none;
+  border-radius:8px;
+  font-size:14px;
+  font-weight:bold;
+}
+
+.back:hover{
+  background:#1558b0;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  body{
+    padding:20px;
+  }
+
+  .container{
+    padding:25px;
+  }
+
+  table{
+    font-size:14px;
+    border-spacing:0 8px;
+  }
+
+  th, td{
+    padding:12px 10px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h2>📄 My Appointment Status</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Patient</th>
+        <th>Department</th>
+        <th>Doctor</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+
+    <tbody>
+    {% for a in appointments %}
+      <tr>
+        <td>{{ a.patient_name }}</td>
+        <td>{{ a.department }}</td>
+        <td>{{ a.doctor }}</td>
+        <td>{{ a.date }}</td>
+        <td>{{ a.time_slot }}</td>
+        <td>
+          <span class="
+            {% if a.status == 'Pending' %}status-pending
+            {% elif a.status == 'Approved' %}status-approved
+            {% else %}status-rejected{% endif %}
+          ">
+            {{ a.status }}
+          </span>
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+  <div class="actions">
+    <a href="/home" class="back">← Back to Dashboard</a>
+  </div>
+
+</div>
+
+</body>
+</html>

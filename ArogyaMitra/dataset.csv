@@ -1,0 +1,321 @@
+symptoms,duration,severity
+cold runny nose,4,0
+body ache cough,4,0
+mild fever cold,3,0
+fatigue cold,3,0
+runny nose nausea,3,0
+mild fever cold,4,0
+headache cold,3,0
+weakness sore throat,1,0
+mild fever weakness,4,0
+mild fever nausea,1,0
+nausea body ache,1,0
+cold body ache,3,0
+headache weakness,3,0
+fatigue nausea,4,0
+headache nausea,3,0
+nausea fatigue,2,0
+cold body ache,2,0
+fatigue weakness,3,0
+weakness sore throat,3,0
+fatigue runny nose,3,0
+body ache sore throat,3,0
+cold body ache,3,0
+body ache cold,1,0
+sore throat headache,2,0
+cold body ache,1,0
+weakness body ache,4,0
+weakness nausea,3,0
+body ache nausea,3,0
+cough headache,1,0
+sore throat cough,3,0
+cough weakness,2,0
+weakness nausea,4,0
+body ache nausea,4,0
+mild fever headache,1,0
+fatigue weakness,1,0
+headache mild fever,4,0
+weakness sore throat,3,0
+nausea headache,1,0
+sore throat nausea,3,0
+fatigue headache,1,0
+mild fever body ache,4,0
+runny nose nausea,1,0
+mild fever cough,1,0
+runny nose cold,2,0
+runny nose mild fever,2,0
+mild fever nausea,4,0
+sore throat cough,3,0
+mild fever weakness,2,0
+body ache cough,4,0
+weakness sore throat,1,0
+runny nose body ache,3,0
+cold sore throat,3,0
+sore throat cold,2,0
+mild fever runny nose,1,0
+runny nose sore throat,3,0
+weakness mild fever,1,0
+mild fever cold,4,0
+fatigue runny nose,3,0
+cold headache,2,0
+cough mild fever,3,0
+cough weakness,3,0
+nausea cough,4,0
+cold weakness,2,0
+sore throat runny nose,3,0
+cold mild fever,4,0
+headache mild fever,2,0
+sore throat fatigue,1,0
+cough headache,2,0
+headache mild fever,2,0
+nausea fatigue,2,0
+body ache fatigue,4,0
+cold mild fever,1,0
+cough sore throat,2,0
+fatigue mild fever,1,0
+sore throat headache,4,0
+cough sore throat,2,0
+weakness body ache,3,0
+cold cough,3,0
+cough weakness,1,0
+cold weakness,3,0
+sore throat weakness,1,0
+headache weakness,1,0
+runny nose mild fever,1,0
+mild fever runny nose,3,0
+fatigue nausea,2,0
+headache sore throat,2,0
+sore throat weakness,4,0
+cold fatigue,3,0
+cold sore throat,2,0
+nausea cough,4,0
+nausea fatigue,3,0
+nausea sore throat,2,0
+cold weakness,3,0
+fatigue weakness,2,0
+nausea headache,1,0
+weakness nausea,1,0
+headache runny nose,3,0
+sore throat cough,2,0
+nausea runny nose,2,0
+headache weakness,4,0
+cold sore throat,3,0
+fatigue cold,1,0
+nausea cold,1,0
+runny nose sore throat,3,0
+mild fever fatigue,4,0
+cough headache,2,0
+cough cold,4,0
+runny nose sore throat,4,0
+sore throat weakness,3,0
+nausea body ache,4,0
+nausea mild fever,3,0
+headache mild fever,3,0
+runny nose sore throat,1,0
+fatigue body ache,3,0
+nausea headache,3,0
+runny nose cold,4,0
+runny nose cough,4,0
+cold fatigue,1,0
+cold sore throat,1,0
+cough nausea,2,0
+fatigue runny nose,4,0
+cold runny nose,4,0
+nausea cough,1,0
+fatigue sore throat,3,0
+sore throat cold,4,0
+fatigue cough,3,0
+cough sore throat,3,0
+runny nose nausea,1,0
+mild fever sore throat,2,0
+fatigue body ache,4,0
+nausea body ache,4,0
+nausea headache,4,0
+headache nausea,2,0
+headache weakness,4,0
+runny nose body ache,3,0
+headache nausea,3,0
+body ache runny nose,1,0
+nausea headache,4,0
+body ache mild fever,2,0
+body ache runny nose,4,0
+headache mild fever,4,0
+cold body ache,1,0
+body ache runny nose,1,0
+runny nose cough,2,0
+cough cold,3,0
+cough fatigue,1,0
+nausea runny nose,2,0
+runny nose body ache,2,0
+cold nausea,4,0
+mild fever weakness,2,0
+headache nausea,1,0
+body ache sore throat,1,0
+cough runny nose,3,0
+cold runny nose,1,0
+weakness mild fever,1,0
+sore throat body ache,4,0
+sore throat body ache,1,0
+nausea sore throat,3,0
+mild fever weakness,4,0
+mild fever nausea,3,0
+cold body ache,1,0
+fatigue headache,2,0
+weakness fatigue,2,0
+cough weakness,1,0
+weakness nausea,2,0
+mild fever fatigue,1,0
+mild fever cold,1,0
+cough mild fever,2,0
+nausea weakness,1,0
+mild fever runny nose,2,0
+fatigue runny nose,2,0
+runny nose headache,2,0
+runny nose mild fever,4,0
+body ache runny nose,4,0
+mild fever cold,3,0
+cold cough,1,0
+fatigue body ache,1,0
+headache cold,4,0
+body ache headache,1,0
+nausea headache,3,0
+severe headache seizure,1,1
+unconscious high fever,7,1
+seizure unconscious,5,1
+high fever seizure,1,1
+seizure chest pain,3,1
+difficulty breathing vomiting blood,3,1
+vomiting blood difficulty breathing,4,1
+vomiting blood chest pain,3,1
+chest pain vomiting blood,7,1
+severe headache loss of consciousness,4,1
+unconscious vomiting blood,2,1
+vomiting blood high fever,1,1
+chest pain vomiting blood,7,1
+seizure high fever,1,1
+high fever unconscious,4,1
+difficulty breathing vomiting blood,3,1
+unconscious chest pain,4,1
+loss of consciousness chest pain,2,1
+difficulty breathing chest pain,1,1
+seizure unconscious,3,1
+chest pain vomiting blood,1,1
+severe headache loss of consciousness,1,1
+difficulty breathing severe headache,2,1
+chest pain high fever,6,1
+unconscious loss of consciousness,4,1
+severe headache chest pain,4,1
+loss of consciousness vomiting blood,2,1
+high fever vomiting blood,4,1
+seizure unconscious,6,1
+loss of consciousness vomiting blood,2,1
+vomiting blood high fever,7,1
+difficulty breathing high fever,2,1
+chest pain loss of consciousness,7,1
+chest pain severe headache,3,1
+seizure severe headache,2,1
+difficulty breathing seizure,6,1
+loss of consciousness chest pain,2,1
+vomiting blood chest pain,7,1
+chest pain vomiting blood,2,1
+seizure vomiting blood,7,1
+loss of consciousness unconscious,6,1
+loss of consciousness difficulty breathing,5,1
+vomiting blood seizure,5,1
+difficulty breathing vomiting blood,3,1
+vomiting blood unconscious,7,1
+difficulty breathing high fever,7,1
+high fever severe headache,5,1
+unconscious seizure,1,1
+seizure loss of consciousness,2,1
+seizure chest pain,4,1
+unconscious high fever,3,1
+loss of consciousness chest pain,7,1
+high fever severe headache,1,1
+chest pain high fever,7,1
+loss of consciousness unconscious,3,1
+seizure loss of consciousness,6,1
+seizure high fever,3,1
+high fever severe headache,7,1
+loss of consciousness seizure,3,1
+unconscious seizure,3,1
+difficulty breathing seizure,7,1
+severe headache high fever,3,1
+seizure high fever,1,1
+unconscious chest pain,7,1
+loss of consciousness severe headache,1,1
+difficulty breathing loss of consciousness,2,1
+difficulty breathing unconscious,4,1
+vomiting blood high fever,7,1
+severe headache difficulty breathing,5,1
+vomiting blood severe headache,4,1
+vomiting blood high fever,2,1
+unconscious severe headache,1,1
+high fever chest pain,2,1
+chest pain unconscious,5,1
+severe headache vomiting blood,3,1
+unconscious chest pain,4,1
+chest pain seizure,3,1
+chest pain difficulty breathing,5,1
+chest pain severe headache,4,1
+severe headache unconscious,2,1
+loss of consciousness chest pain,6,1
+chest pain difficulty breathing,7,1
+vomiting blood severe headache,1,1
+chest pain vomiting blood,3,1
+vomiting blood loss of consciousness,4,1
+high fever seizure,1,1
+loss of consciousness vomiting blood,4,1
+unconscious seizure,4,1
+unconscious difficulty breathing,5,1
+unconscious seizure,3,1
+chest pain vomiting blood,5,1
+loss of consciousness seizure,7,1
+vomiting blood difficulty breathing,7,1
+chest pain high fever,3,1
+vomiting blood high fever,6,1
+vomiting blood chest pain,1,1
+difficulty breathing seizure,7,1
+vomiting blood seizure,5,1
+seizure chest pain,2,1
+high fever difficulty breathing,6,1
+unconscious vomiting blood,1,1
+difficulty breathing loss of consciousness,6,1
+loss of consciousness severe headache,4,1
+unconscious difficulty breathing,5,1
+difficulty breathing chest pain,3,1
+difficulty breathing high fever,5,1
+loss of consciousness seizure,6,1
+severe headache loss of consciousness,1,1
+loss of consciousness high fever,1,1
+high fever severe headache,7,1
+seizure high fever,1,1
+vomiting blood loss of consciousness,2,1
+difficulty breathing loss of consciousness,5,1
+vomiting blood loss of consciousness,6,1
+severe headache chest pain,7,1
+difficulty breathing seizure,7,1
+high fever vomiting blood,2,1
+vomiting blood difficulty breathing,2,1
+chest pain difficulty breathing,4,1
+seizure unconscious,6,1
+chest pain high fever,4,1
+difficulty breathing chest pain,6,1
+chest pain severe headache,4,1
+chest pain difficulty breathing,2,1
+loss of consciousness seizure,7,1
+unconscious severe headache,1,1
+loss of consciousness vomiting blood,6,1
+vomiting blood chest pain,4,1
+high fever chest pain,3,1
+severe headache seizure,2,1
+difficulty breathing high fever,5,1
+severe headache seizure,4,1
+chest pain difficulty breathing,5,1
+high fever vomiting blood,7,1
+loss of consciousness chest pain,4,1
+loss of consciousness unconscious,1,1
+high fever vomiting blood,3,1
+seizure chest pain,5,1
+vomiting blood chest pain,4,1
+high fever seizure,2,1

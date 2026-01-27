@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Review Medicine Price</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="form-box">
+  <h2>Medicine Price Enquiry</h2>
+  <p class="subtitle">
+    Request the price of prescribed medicines before placing an order.
+  </p>
+
+  <form method="POST" action="/review_price">
+
+    <!-- Patient Info -->
+    <div class="section">
+      <h3>Patient Information</h3>
+
+      <div class="grid">
+        <div>
+          <label>Full Name</label>
+          <input name="name" placeholder="Enter full name" required>
+        </div>
+
+        <div>
+          <label>Phone Number</label>
+          <input name="phone" placeholder="Enter contact number" required>
+        </div>
+      </div>
+    </div>
+
+    <!-- Medicine Info -->
+    <div class="section">
+      <h3>Medicine Details</h3>
+
+      <div class="grid">
+        <div>
+          <label>Medicine Name</label>
+          <input name="medicine" placeholder="e.g. Azithromycin" required>
+        </div>
+
+        <div>
+          <label>Required Quantity</label>
+          <input type="number" name="quantity" placeholder="e.g. 6" required>
+        </div>
+      </div>
+
+      <label>Prescribed By (Doctor)</label>
+      <input name="doctor" placeholder="Doctor's name" required>
+    </div>
+
+    <!-- Info Note -->
+    <div class="section">
+      <p class="hint">
+        Prices may vary based on availability and dosage strength.
+        Final cost will be confirmed by the admin.
+      </p>
+    </div>
+
+    <!-- Submit -->
+    <button type="submit" class="primary-btn">
+      Request Price Details
+    </button>
+
+  </form>
+</div>
+
+</body>
+</html>

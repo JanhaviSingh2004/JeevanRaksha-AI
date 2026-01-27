@@ -1,0 +1,29 @@
+disease,severity,care
+Common Cold,Mild,Drink warm water|Take rest|Avoid cold food
+Fever,Mild,Rest at home|Drink plenty of water|Check temperature
+Flu,Mild,Rest at home|Warm fluids|Avoid going outside
+Headache,Mild,Rest in quiet place|Drink water|Avoid mobile use
+Stomach Pain,Mild,Light food|Warm water|Rest
+Food Poisoning,Mild,ORS solution|Light food|Avoid outside food
+Loose Motion,Mild,ORS solution|Drink water|Rest
+Vomiting,Mild,Small sips of water|Rest|Avoid oily food
+Cough,Mild,Steam inhalation|Warm water|Avoid dust
+Sore Throat,Mild,Warm salt water gargle|Warm drinks|Rest
+Body Pain,Mild,Rest|Warm compress|Avoid heavy work
+Cold and Cough,Mild,Steam inhalation|Warm fluids|Rest
+Gas Problem,Mild,Avoid spicy food|Eat on time|Walk slowly
+Acidity,Mild,Avoid oily food|Eat small meals|Drink water
+Constipation,Mild,Drink more water|Eat fruits|Walk daily
+Skin Allergy,Mild,Avoid itching|Keep skin clean|Doctor if worsens
+UTI,Mild,Drink more water|Maintain cleanliness|Visit doctor if pain
+Malaria,Severe,Go to government hospital|Blood test needed|Do not delay
+Dengue,Severe,Go to hospital immediately|Do not take painkillers|Drink fluids
+Typhoid,Severe,Visit doctor|Take medicines as advised|Complete rest
+Tuberculosis,Severe,Visit hospital|Long treatment needed|Do not stop medicine
+Pneumonia,Severe,Hospital care needed|Do not delay|Keep patient warm
+Jaundice,Severe,Rest completely|Avoid oily food|Doctor check needed
+Breathing Problem,Severe,Go to hospital immediately|Sit upright|Avoid smoke
+Chest Pain,Severe,Emergency hospital visit|Do not ignore|Keep calm
+Diabetes,Severe,Regular sugar check|Avoid sweets|Doctor guidance needed
+High Blood Pressure,Severe,Regular BP check|Reduce salt|Doctor advice needed
+Pregnancy Issues,Severe,Visit health center|Do not self-medicate|Follow doctor advice

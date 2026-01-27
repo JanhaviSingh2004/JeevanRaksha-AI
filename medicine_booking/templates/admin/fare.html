@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Set Medicine Fare</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+  <h2>Medicine Fare Requests</h2>
+
+  {% for r in requests %}
+  <div class="card">
+    <p><b>Medicine:</b> {{ r.medicine }}</p>
+    <p><b>Quantity:</b> {{ r.quantity }}</p>
+
+    <form method="POST" action="/admin/save_fare">
+      <input type="hidden" name="medicine" value="{{ r.medicine }}">
+      <input type="number" name="price" placeholder="Price per unit" required>
+      <button type="submit">Save Fare</button>
+    </form>
+  </div>
+  {% endfor %}
+</div>
+
+</body>
+</html>
